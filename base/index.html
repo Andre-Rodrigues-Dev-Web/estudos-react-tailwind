@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*Reset*/
+      * {
+        box-sizing: border-box;
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      /*Login*/
+      .content_login {
+        background-color: #003c44;
+        box-shadow: 1px 3px 6px 0 #00000034;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .form_login {
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        min-height: 25em;
+        padding: 1em;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        background-color: #e0e0e0;
+        border: none;
+        border-radius: 0.5em;
+        padding: 0.65em 1em;
+        outline: none;
+      }
+
+      button {
+        background-color: #00b398;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 3px 6px 0 #00000034;
+        color: #fff;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 0.6em 5em;
+      }
+
+      .link_content{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+        text-align: center;
+      }
+
+      .link_content a {
+        color: #333;
+        font-size: 1em;
+        font-weight: 400;
+      }
+
+      .link_content a:last-child {
+        font-size: 0.96em;
+      }
+
+      @media (width >= 48em) {
+        .form_login {
+          min-height: 18em;
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content_login">
+      <form class="form_login">
+        <input type="email" name="" id="" placeholder="Digite seu e-mail" />
+        <input type="password" name="" id="" placeholder="Digite sua senha" />
+        <button>Logar</button>
+        <div class="link_content">
+          <a href="http://">Esqueci a senha</a>
+          <a href="http://"
+            >Já possuí uma conta? Crie agora mesmo e aproveite nosso conteúdo</a
+          >
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

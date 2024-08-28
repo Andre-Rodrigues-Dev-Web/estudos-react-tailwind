@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*Reset*/
+      * {
+        box-sizing: border-box;
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      a,
+      a:hover {
+        text-decoration: none;
+      }
+      li {
+        list-style-type: none;
+      }
+      /*Menu*/
+      .top {
+        background-color: #003641;
+      }
+      .top .top_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.56em 1em;
+      }
+      .top .top_container .logo {
+        width: 20%;
+      }
+
+      .top .top_container .logo > a img {
+        width: 80%;
+      }
+      .top .top_container .button_responsive {
+        background-color: transparent;
+        display: block;
+      }
+      .top .top_container .button_responsive > div {
+        position: relative;
+      }
+      .top .top_container .button_responsive > div,
+      div:after,
+      div:before {
+        background-color: #fff;
+        height: 3px;
+        width: 30px;
+      }
+      .top .top_container .button_responsive > div:after,
+      div:before {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+      .top .top_container .button_responsive > div:after{
+        top: 10px;
+      }
+      .top .top_container .button_responsive > div:before{
+        top: -10px;
+      }
+      .top .top_container .links_container {
+        display: none;
+      }
+      .top .top_container .links_container > .links {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .top .top_container .links_container > .links li {
+        padding: 0.45em 1em;
+      }
+      .top .top_container .links_container > .links li:last-child {
+        background-color: #00ae9d;
+        border-radius: 5px;
+      }
+      .top .top_container .links_container > .links li a {
+        color: #fff;
+      }
+      @media (min-width: 48em) {
+        .top .top_container .logo > a img {
+          width: 80%;
+        }
+        .top .top_container .button_responsive {
+          display: none;
+        }
+        .top .top_container .links_container {
+          display: block;
+          min-width: 640px;
+        }
+        .top .top_container .links_container > .links {
+          flex-direction: row;
+          gap: 1em;
+        }
+        .top .top_container .links_container > .links li {
+          padding: 0.45em 1.8em;
+        }
+        .top .top_container .links_container > .links li a {
+          color: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="content_login">
+      <header class="top">
+        <div class="top_container">
+          <div class="logo">
+            <a href="">
+              <img
+                src="https://www.sicoob.com.br/documents/20128/1144635/LOGO-SICOOB-Pura-pos.png/855a0660-db5b-bc04-5602-893b90a87365?t=1576538144644"
+                alt="Logo do Sicoob"
+              />
+            </a>
+          </div>
+          <button class="button_responsive">
+            <div></div>
+          </button>
+          <nav class="links_container">
+            <ul class="links">
+              <li><a href="">Destaques</a></li>
+              <li><a href="">Soluções de TI</a></li>
+              <li><a href="">Nossos Treinamentos</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </section>
+  </body>
+</html>
