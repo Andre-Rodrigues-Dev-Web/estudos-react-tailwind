@@ -2,7 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  @apply text-white text-3xl md:hidden focus:outline-none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ButtonHamburguer = ({ onClick }) => {

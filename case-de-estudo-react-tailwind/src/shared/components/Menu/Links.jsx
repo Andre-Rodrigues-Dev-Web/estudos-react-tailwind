@@ -3,12 +3,31 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const LinksContainer = styled.div`
-  @apply md:flex md:items-center md:w-auto w-full md:static absolute top-full left-0 bg-blue-600 md:bg-transparent md:mt-0 transition-all duration-300 ease-in-out;
-  ${({ isOpen }) => (isOpen ? `@apply block` : `@apply hidden`)};
+  background-color: #003c44;
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  padding: 8px 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
 `;
 
 const NavLink = styled(Link)`
-  @apply block md:inline-block px-4 py-2 text-white hover:bg-blue-700;
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  @media (min-width: 768px) {
+    padding: 8px 12px;
+  }
 `;
 
 export const LinksContent = ({ isOpen }) => {

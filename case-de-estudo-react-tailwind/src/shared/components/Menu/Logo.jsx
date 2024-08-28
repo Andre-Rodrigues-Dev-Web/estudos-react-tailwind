@@ -3,18 +3,21 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const LogoContainer = styled.div`
-  @apply text-white text-2xl font-bold;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 `;
 
 const LogoImage = styled.img`
-  @apply h-10 w-auto;
+  height: 40px;
+  width: auto;
 `;
 
 export const Logo = () => {
   return (
     <LogoContainer>
       <Link to="/">
-        <LogoImage src="/path/to/your/logo.png" alt="Logo Sicoob" />
+        <LogoImage src="https://www.sicoob.com.br/documents/20128/1144635/LOGO-SICOOB-Pura-pos.png/855a0660-db5b-bc04-5602-893b90a87365?t=1576538144644" alt="MyBrand Logo" />
       </Link>
     </LogoContainer>
   );
