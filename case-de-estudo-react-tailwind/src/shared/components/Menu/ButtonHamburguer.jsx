@@ -1,16 +1,10 @@
-import { ContainerButtonHamburguer } from "./style";
+import React from 'react';
+import styled from 'styled-components';
 
-const ButtonHamburguer = () => {
-  return (
-    <ContainerButtonHamburguer>
-      <div className="relative">
-        <div className="bg-white h-[3px] w-[30px] relative">
-          <div className="absolute left-0 top-[-10px] bg-white h-[3px] w-[30px]" />
-          <div className="absolute left-0 top-[10px] bg-white h-[3px] w-[30px]" />
-        </div>
-      </div>
-    </ContainerButtonHamburguer>
-  );
+const Button = styled.button`
+  @apply text-white text-3xl md:hidden focus:outline-none;
+`;
+
+export const ButtonHamburguer = ({ onClick }) => {
+  return <Button onClick={onClick}>&#9776;</Button>;
 };
-
-export default ButtonHamburguer;
